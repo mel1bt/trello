@@ -1,0 +1,69 @@
+body {
+ background-color: #0079BF;
+}
+
+* {
+  box-sizing: content-box;
+    position: relative;
+}
+
+.listaPreview {
+     margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+    background-color: #006AA8;
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    color: whitesmoke;
+}
+
+.listaPreview:hover{
+    background-color: #005586;
+}
+
+.formList{
+    position: relative;
+    text-align: center;
+    background-color: #E2E4E6;
+    width: 230px;
+    border-radius: 5px;
+    box-sizing:border-box;
+    display: none;
+
+}
+
+.btnFl {
+  
+    text-align: center;
+    margin: 8px;
+}
+
+.inputFl { 
+    position: relative;
+    border: 1px solid #B5B6B7;
+    background-color: #D7D9DB;
+    box-shadow: 3px 3px 3px 3px #ccc;
+    width: 200px;
+    margin: 8px;
+    height: 30px;
+    color: black;
+}
+
+.inputFl:hover { 
+    position: relative;
+    border: 1px solid #B5B6B7;
+    background-color: #E2E4E6;
+    box-shadow: 3px 3px 3px 3px #ccc;
+    color: black;
+}
+
+.menu {
+    background-color: #276787;
+    text-align: center;
+}
+
+.mt-10{
+    margin-top: 10px;
+    margin-left: 10px;
+}
