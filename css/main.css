@@ -16,6 +16,8 @@ body {
     height: 30px;
     border-radius: 15px;
     color: whitesmoke;
+    top: 0px;
+    display: inline-block;
 }
 
 .listaPreview:hover{
@@ -27,20 +29,20 @@ body {
     text-align: center;
     background-color: #E2E4E6;
     width: 230px;
+    top: 0px;
     border-radius: 5px;
     box-sizing:border-box;
-    display: none;
-
+    display: inline-block;
 }
 
 .btnFl {
-  
     text-align: center;
     margin: 8px;
 }
 
 .inputFl { 
     position: relative;
+    top: 0;
     border: 1px solid #B5B6B7;
     background-color: #D7D9DB;
     box-shadow: 3px 3px 3px 3px #ccc;
@@ -66,4 +68,15 @@ body {
 .mt-10{
     margin-top: 10px;
     margin-left: 10px;
+}
+
+.tarjeta{
+    position: relative;
+    top: 0;
+    width: 250px;
+    height: 100px;
+    background-color: aliceblue;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;s
 }
