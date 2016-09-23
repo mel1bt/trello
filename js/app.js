@@ -47,7 +47,7 @@ window.addEventListener("load",function(){
             newTarjeta.insertBefore(newInpTarj, newTituTarj.nextSibling);
             newTarjeta.insertBefore(newButtonS, newInpTarj.nextSibling);
             newlinkTarj.style.display="none";
-            /*
+
             newButtonS.addEventListener("click", function(){
                 newInpTarj.style.display = "none";
                 newButtonS.style.display = "none";
@@ -59,7 +59,7 @@ window.addEventListener("load",function(){
                 newTarjeta.appendChild(textareaNew);
                 newTarjeta.insertBefore(textareaNew, newTituTarj.nextSibling);
                 newlinkTarj.style.display="block";
-            });*/
+            });
             
         });
         
