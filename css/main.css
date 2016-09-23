@@ -33,6 +33,7 @@ body {
     border-radius: 5px;
     box-sizing:border-box;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btnFl {
@@ -73,10 +74,32 @@ body {
 .tarjeta{
     position: relative;
     top: 0;
-    width: 250px;
-    height: 100px;
+    width: 251px;
+    height: auto;
     background-color: aliceblue;
     margin: 10px;
     border-radius: 20px;
-    text-align: center;s
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+}
+.subtarjeta{
+    background-color: white;
+    margin: 4px;
+    color: black;
+    display: block;
+    width: 223px;
+    text-align: center;
+    padding: 10px;
+    height: 24px;
+}
+.botAni{
+    position: relative;
+    display: block;
+    text-align: center;
+
+}
+.textSubA{
+    resize: none;
+    border: none;
 }
