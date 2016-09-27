@@ -3,33 +3,21 @@ window.addEventListener("load",function(){
     var spanForm = document.getElementById('spanForm');
     var formList = document.getElementById('formList1');
     var areaTrabajo = document.getElementById('areaTrabajo');
-    var num =0;
     formList.style.display = "none";
     spanForm.addEventListener("click",function(e){
 		e.preventDefault();
         formList.style.display = "block";
         spanForm.style.display = "none";
         formList.style.display="inline-block";
-        inpForm.value = "";
-        inpForm.focus();
 	});
     //para la version 2
     var btnForm = document.getElementById("btnForm");
     var inpForm = document.getElementById("inpForm");
     btnForm.addEventListener("click", function(e){
         tarjeta();
-        aumentar();
         
     });
-
-    function aumentar(){
-        var result = areaTrabajo.style.width;
-        result = Number(result.split("px",1));
-        result += 300;
-        areaTrabajo.style.width = result + "px";
-    }
-
-        function tarjeta(){
+    function tarjeta(){
         var newTarjeta = document.createElement("div");
         var newTituTarj = document.createElement("h5");
         var newlinkTarj = document.createElement("a");

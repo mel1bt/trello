@@ -20,6 +20,10 @@ body {
     display: inline-block;
 }
 
+.contenido{
+    white-space: nowrap;
+}
+
 .listaPreview:hover{
     background-color: #005586;
 }
@@ -31,9 +35,10 @@ body {
     width: 230px;
     top: 0px;
     border-radius: 5px;
-    box-sizing:border-box;
+    box-sizing:content-box;
     display: inline-block;
     cursor: pointer;
+    vertical-align: top;
 }
 
 .btnFl {
@@ -61,17 +66,26 @@ body {
     color: black;
 }
 
-.menu {
-    background-color: #276787;
+.menu{
+   background-color: #276787;
     text-align: center;
 }
 
+#menu {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
 .mt-10{
+    white-space: nowrap;
+    top: 60px;
     margin-top: 10px;
     margin-left: 10px;
 }
 
 .tarjeta{
+    vertical-align: top;
     position: relative;
     top: 0;
     width: 251px;
@@ -82,6 +96,8 @@ body {
     text-align: center;
     display: inline-block;
     padding: 5px;
+    white-space: normal;
+    box-sizing: border-box;
 }
 .subtarjeta{
     background-color: white;
@@ -92,6 +108,7 @@ body {
     text-align: center;
     padding: 10px;
     height: 24px;
+    
 }
 .botAni{
     position: relative;
