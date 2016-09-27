@@ -50,6 +50,7 @@ window.addEventListener("load",function(){
         newlinkTarj.addEventListener("click", function(){
             var newInpTarj = document.createElement("textarea");
             var newButtonS = document.createElement("button");
+            newInpTarj.classList.add("subtarjeta1");
             newButtonS.setAttribute("type","button");
             newButtonS.classList.add("btn");
             newButtonS.classList.add("btn-success");
@@ -61,7 +62,6 @@ window.addEventListener("load",function(){
             newTarjeta.insertBefore(newInpTarj, newTituTarj.nextSibling);
             newTarjeta.insertBefore(newButtonS, newInpTarj.nextSibling);
             newlinkTarj.style.display="none";
-
             newInpTarj.addEventListener("keyup", function(){
             var el = this;
             el.style.cssText = 'padding:0; height:' + el.scrollHeight + 'px';
@@ -79,13 +79,7 @@ window.addEventListener("load",function(){
                 newTarjeta.appendChild(textareaNew);
                 newTarjeta.insertBefore(textareaNew, newTituTarj.nextSibling);
                 newlinkTarj.style.display="block";
-            });
-            
-        });
-        
-        
-        
+            }); 
+        });       
     }    
-    
-    
 });
