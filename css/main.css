@@ -7,6 +7,20 @@ body {
     position: relative;
 }
 
+body::-webkit-scrollbar {
+    width: 1em;
+    border-radius: 
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
 .listaPreview {
      margin-top: 10px;
     margin-left: 10px;
@@ -102,17 +116,17 @@ body {
 
 .subtarjeta1{
     resize: none;
-  border: 1px solid #DBE1EB;
-  font-size: 18px;
-  font-family: Arial, Verdana;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 4px;
-  background: #FFFFFF;
-  background: linear-gradient(left, #FFFFFF, #F7F9FA);
-  color: #2E3133;
+    border: 1px solid #DBE1EB;
+    font-size: 18px;
+    font-family: Arial, Verdana;
+   padding-left: 7px;
+   padding-right: 7px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   border-radius: 4px;
+   background: #FFFFFF;
+   background: linear-gradient(left, #FFFFFF, #F7F9FA);
+   color: #2E3133;
 }
 .subtarjeta{
     background-color: white;

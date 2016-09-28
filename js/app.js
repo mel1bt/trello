@@ -77,7 +77,7 @@ window.addEventListener("load",function(){
                 textareaNew.appendChild(nodoAreaNew);
                 //newTarjeta.style.text-align = "center";
                 newTarjeta.appendChild(textareaNew);
-                newTarjeta.insertBefore(textareaNew, newTituTarj.nextSibling);
+                newTarjeta.insertBefore(textareaNew, newTituTarj.previousSibling);
                 newlinkTarj.style.display="block";
             }); 
         });       
