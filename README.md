@@ -1,5 +1,6 @@
 # Proyecto TRELLO Version 2
-![Con titulo](http://es.tinypic.com/r/1zqd5ba/9")
+
+![Con titulo](http://i64.tinypic.com/1zqd5ba.jpg)
 
 ###Versión 0.0.1
 Un elemento en el HTML con el mensaje "Añadir una lista", que al dar click muestre un input y un botón (formulario) para que el usuario ingrese el nombre de la lista.
