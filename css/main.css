@@ -135,7 +135,8 @@ body::-webkit-scrollbar-thumb {
 }
 .subtarjeta:hover{
     background-color: #EDEFF0;
-
+transform: rotate(15deg);
+    cursor: pointer;
 }
 .botAni{
     position: relative;

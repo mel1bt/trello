@@ -119,13 +119,14 @@ function empiezaArrastrar(e) {
 
 function entraArrastrar(e) {
 	//console.log("dragenter");
+   // this.style.transform = "rotate(15deg)";
 	this.classList.add("animated", "bounce");
 }
 
 function dejaArrastrar(e) {
 	//console.log("dragleave");
 	this.classList.remove("animated", "bounce");
-    //this.style.transform = "none";
+    this.style.transform = "none";
 }
 
 function arrastrarSobre(e) {    
