@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     width: 251px;
     height: auto;
-    background-color: aliceblue;
+    background-color: #E2E4E6;
     margin: 10px;
     border-radius: 20px;
     text-align: center;
@@ -117,35 +117,34 @@ body::-webkit-scrollbar-thumb {
 .subtarjeta1{
     resize: none;
     border: 1px solid #DBE1EB;
-    font-size: 18px;
-    font-family: Arial, Verdana;
-   padding-left: 7px;
-   padding-right: 7px;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   border-radius: 4px;
-   background: #FFFFFF;
-   background: linear-gradient(left, #FFFFFF, #F7F9FA);
-   color: #2E3133;
+    margin: 7px;
+    border-radius: 4px;
+    width: 90%;
 }
+
 .subtarjeta{
     background-color: white;
-    margin: 4px;
+    margin: 8px;
     color: black;
     display: block;
-    width: 223px;
-    text-align: center;
     padding: 10px;
-    height: 24px;
-    
+    border-radius:5px;
+    text-align: left;
+}
+.subtarjeta:hover{
+    background-color: #EDEFF0;
 }
 .botAni{
     position: relative;
-    display: block;
     text-align: center;
 
 }
 .textSubA{
     resize: none;
     border: none;
+}
+.titulo {
+    display: block;
+    text-align: left;
+    left: 10px;
 }
