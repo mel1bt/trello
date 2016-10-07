@@ -78,6 +78,8 @@ body::-webkit-scrollbar-thumb {
     background-color: #E2E4E6;
     box-shadow: 3px 3px 3px 3px #ccc;
     color: black;
+    
+  
 }
 
 .menu{
@@ -133,6 +135,7 @@ body::-webkit-scrollbar-thumb {
 }
 .subtarjeta:hover{
     background-color: #EDEFF0;
+
 }
 .botAni{
     position: relative;

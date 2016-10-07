@@ -119,20 +119,23 @@ function empiezaArrastrar(e) {
 
 function entraArrastrar(e) {
 	//console.log("dragenter");
-	//this.classList.add("over");
+	this.classList.add("animated", "bounce");
 }
 
 function dejaArrastrar(e) {
 	//console.log("dragleave");
-	//this.classList.remove("over");
+	this.classList.remove("animated", "bounce");
+    //this.style.transform = "none";
 }
 
-function arrastrarSobre(e) {
+function arrastrarSobre(e) {    
 	//console.log("dragover");
 	e.preventDefault();
+    this.style.transform = "rotate(15deg)";
 }
 
 function soltar(e) {
+    this.style.transform = "none";
 	//console.log("drop");
 	var idArrastrado = e.dataTransfer.getData("text");
 	var elementoArrastrado = document.getElementById(idArrastrado);
@@ -144,6 +147,7 @@ function soltar(e) {
 }
 
 function terminaArrastrar(e) {
+    this.style.transform = "none";
 	//console.log("dragend");
 	//this.style.opacity = null;
 }
