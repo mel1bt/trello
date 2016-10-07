@@ -60,14 +60,16 @@ function lista(){
     spanForm.style.display = "inline-block";
     formList.style.display = "none";
     newlinkTarj.addEventListener("click", formNuevaTarjeta);
+    
 };
 
 function formNuevaTarjeta(e){
-    e.preventDefault();
-    newlinkTarj.style.display="none";
+    e.preventDefault
+    console.log(this);
     var newDiv = document.createElement("div");
     var newInpTarj = document.createElement("textarea");
     var newButtonS = document.createElement("button");
+   
     newInpTarj.classList.add("subtarjeta1");
     newButtonS.classList.add("center", "btn", "btn-success", "botAni"); 
     newButtonS.innerHTML = "Añadir";
@@ -77,6 +79,7 @@ function formNuevaTarjeta(e){
     newInpTarj.addEventListener("keyup", validacionTexto);
     newButtonS.type="button"    ;
     newButtonS.addEventListener("click", guardarTarjeta); 
+    this.style.display="none";
     newInpTarj.focus();
 };
 
@@ -88,14 +91,14 @@ function validacionTexto(){
 function guardarTarjeta(e){
     e.preventDefault();
     this.previousSibling.style.display = "none";
-    this.style.display = "none";
     var textareaNew = document.createElement("div");
     textareaNew.id = "tarjeta" + ntarjeta;
     textareaNew.classList.add("subtarjeta");
     textareaNew.setAttribute("draggable", "true");
     textareaNew.innerHTML = this.previousSibling.value;
     this.parentElement.appendChild(textareaNew);
-    newlinkTarj.style.display="block";
+    this.style.display = "none";
+    this.parentElement.nextSibling.style.display = "block";
     ntarjeta++;
     draganddrop();
 };
@@ -114,42 +117,39 @@ function draganddrop(){
 
 function empiezaArrastrar(e) {
 	e.dataTransfer.setData("text", this.id);
-	//this.style.opacity = "0.4";
 }
 
 function entraArrastrar(e) {
-	//console.log("dragenter");
-   // this.style.transform = "rotate(15deg)";
 	this.classList.add("animated", "bounce");
+    this.style.transform = "none";
+    this.style.transformrotate(15deg)";
 }
 
 function dejaArrastrar(e) {
-	//console.log("dragleave");
 	this.classList.remove("animated", "bounce");
     this.style.transform = "none";
+    this.parentElement.parentElement.style.opacity= 1;
+    
 }
 
 function arrastrarSobre(e) {    
-	//console.log("dragover");
 	e.preventDefault();
-    this.style.transform = "rotate(15deg)";
+    
+    this.parentElement.parentElement.style.opacity= 0.8;
 }
 
 function soltar(e) {
     this.style.transform = "none";
-	//console.log("drop");
 	var idArrastrado = e.dataTransfer.getData("text");
 	var elementoArrastrado = document.getElementById(idArrastrado);
     var temporal = this.innerHTML;
     console.log(temporal);
 	e.target.innerHTML = elementoArrastrado.innerHTML;
     elementoArrastrado.innerHTML = temporal;
-	//this.classList.remove("over");
+    this.parentElement.parentElement.style.opacity= 1;
 }
 
 function terminaArrastrar(e) {
     this.style.transform = "none";
-	//console.log("dragend");
-	//this.style.opacity = null;
 }
 

@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb {
     height: auto;
     background-color: #E2E4E6;
     margin: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     text-align: center;
     display: inline-block;
     padding: 5px;
@@ -135,7 +135,6 @@ body::-webkit-scrollbar-thumb {
 }
 .subtarjeta:hover{
     background-color: #EDEFF0;
-transform: rotate(15deg);
     cursor: pointer;
 }
 .botAni{
