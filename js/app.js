@@ -50,7 +50,7 @@ function lista(){
     newlinkTarj = document.createElement("a");
     newlinkTarj.innerHTML= "Añadir una tarjeta";
     newlinkTarj.href="#";
-        
+    //newLista.setAttribute("draggable", "true");
     newLista.appendChild(newTituTarj);
     newLista.appendChild(newlinkTarj);
     newLista.classList.add("tarjeta"); 
@@ -61,6 +61,10 @@ function lista(){
     formList.style.display = "none";
     newlinkTarj.addEventListener("click", formNuevaTarjeta);
     
+    newLista.addEventListener("drop", dropLista);
+    newLista.addEventListener("dragover", dragoverLista);
+    //newLista.addEventListener("dragleave", dragleaveLista);
+
 };
 
 function formNuevaTarjeta(e){
@@ -81,6 +85,7 @@ function formNuevaTarjeta(e){
     newButtonS.addEventListener("click", guardarTarjeta); 
     this.style.display="none";
     newInpTarj.focus();
+    
 };
 
 function validacionTexto(){
@@ -100,19 +105,12 @@ function guardarTarjeta(e){
     this.style.display = "none";
     this.parentElement.nextSibling.style.display = "block";
     ntarjeta++;
-    draganddrop();
-};
-
-function draganddrop(){
-    var tarjeta = document.getElementsByClassName("subtarjeta");
-	for (var i = 0, l = tarjeta.length; i < l; i++) {
-		tarjeta[i].addEventListener("dragstart", empiezaArrastrar);
-		tarjeta[i].addEventListener("dragenter", entraArrastrar);
-		tarjeta[i].addEventListener("dragleave", dejaArrastrar);
-		tarjeta[i].addEventListener("dragover", arrastrarSobre);
-		tarjeta[i].addEventListener("drop", soltar);
-		tarjeta[i].addEventListener("dragend", terminaArrastrar);
-	}
+    textareaNew.addEventListener("dragstart", empiezaArrastrar);
+    textareaNew.addEventListener("dragenter", entraArrastrar);
+	textareaNew.addEventListener("dragleave", dejaArrastrar);
+    textareaNew.addEventListener("dragover", arrastrarSobre);
+    textareaNew.addEventListener("drop", soltar);
+    textareaNew.addEventListener("dragend", terminaArrastrar);
 };
 
 function empiezaArrastrar(e) {
@@ -122,34 +120,47 @@ function empiezaArrastrar(e) {
 function entraArrastrar(e) {
 	this.classList.add("animated", "bounce");
     this.style.transform = "none";
-    this.style.transformrotate(15deg)";
+    this.classList.add("over");
+    
 }
 
 function dejaArrastrar(e) {
 	this.classList.remove("animated", "bounce");
     this.style.transform = "none";
     this.parentElement.parentElement.style.opacity= 1;
-    
+    this.classList.remove("over");
 }
 
 function arrastrarSobre(e) {    
 	e.preventDefault();
-    
     this.parentElement.parentElement.style.opacity= 0.8;
+    //this.style.backgroundColor = "gray";
 }
 
 function soltar(e) {
     this.style.transform = "none";
 	var idArrastrado = e.dataTransfer.getData("text");
 	var elementoArrastrado = document.getElementById(idArrastrado);
-    var temporal = this.innerHTML;
-    console.log(temporal);
-	e.target.innerHTML = elementoArrastrado.innerHTML;
-    elementoArrastrado.innerHTML = temporal;
     this.parentElement.parentElement.style.opacity= 1;
+    this.style.backgroundColor = "white";
+    this.classList.remove("over");
+    this.parentElement.insertBefore(elementoArrastrado,this.nextElementSibling);
+    e.stopPropagation();
 }
 
 function terminaArrastrar(e) {
-    this.style.transform = "none";
+    this.style.backgroundColor = "white";
+    this.parentElement.parentElement.style.opacity= 1;
 }
+
+function dropLista(e){
+    var idArrastrado = e.dataTransfer.getData("text");
+	var elementoArrastrado = document.getElementById(idArrastrado);
+    this.insertBefore(elementoArrastrado,this.firstElementChild.nextElementSibling);
+};
+
+function dragoverLista(e){
+    e.preventDefault(); 
+};
+
 

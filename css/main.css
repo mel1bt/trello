@@ -135,7 +135,7 @@ body::-webkit-scrollbar-thumb {
 }
 .subtarjeta:hover{
     background-color: #EDEFF0;
-    cursor: pointer;
+    cursor: move;
 }
 .botAni{
     position: relative;
@@ -150,4 +150,8 @@ body::-webkit-scrollbar-thumb {
     display: block;
     text-align: left;
     left: 10px;
+}
+
+.over {
+  border: 2px dashed #000;
 }
