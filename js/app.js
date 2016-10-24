@@ -42,7 +42,7 @@ function aumentar(){
 };
 
 function lista(){
-    
+    if (existeContenido(inpForm.value)) {
     var newLista = document.createElement("div");
     var newTituTarj = document.createElement("b");
     newTituTarj.classList.add("titulo");
@@ -64,6 +64,13 @@ function lista(){
     newLista.addEventListener("drop", dropLista);
     newLista.addEventListener("dragover", dragoverLista);
     //newLista.addEventListener("dragleave", dragleaveLista);
+    } else {
+      swal({
+      title: "Ingrese un titulo a la lista!",
+      timer: 1000,
+      showConfirmButton: false
+      });
+    }
 
 };
 
@@ -95,6 +102,7 @@ function validacionTexto(){
 
 function guardarTarjeta(e){
     e.preventDefault();
+    if (existeContenido(this.previousSibling.value)) {
     this.previousSibling.style.display = "none";
     var textareaNew = document.createElement("div");
     textareaNew.id = "tarjeta" + ntarjeta;
@@ -107,10 +115,17 @@ function guardarTarjeta(e){
     ntarjeta++;
     textareaNew.addEventListener("dragstart", empiezaArrastrar);
     textareaNew.addEventListener("dragenter", entraArrastrar);
-	textareaNew.addEventListener("dragleave", dejaArrastrar);
+	  textareaNew.addEventListener("dragleave", dejaArrastrar);
     textareaNew.addEventListener("dragover", arrastrarSobre);
     textareaNew.addEventListener("drop", soltar);
     textareaNew.addEventListener("dragend", terminaArrastrar);
+    }else{
+      swal({
+      title: "Ingrese un texto!",
+      timer: 1000,
+      showConfirmButton: false
+      });
+    }
 };
 
 function empiezaArrastrar(e) {
@@ -163,4 +178,11 @@ function dragoverLista(e){
     e.preventDefault(); 
 };
 
-
+function existeContenido(mensaje) {
+        mensaje = mensaje.trim();
+        if (mensaje.length == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
